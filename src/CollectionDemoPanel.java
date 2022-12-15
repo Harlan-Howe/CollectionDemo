@@ -41,7 +41,7 @@ public class CollectionDemoPanel extends JPanel
                 arrayOfHexes[i].drawSelfAt(20+30*i, 100, g);
             else
             {
-                g.drawString("null",20+30*i - w/2, 105);
+                g.drawString("null",20+30*i - w/2 + 10, 105);
             }
         }
         // ============================================ ARRAY LIST
@@ -64,7 +64,7 @@ public class CollectionDemoPanel extends JPanel
         for (int i=0; i<numItemsInArrayList; i++)
         {
             // TODO #2: draw the hexItem at index i at location (20+30*(i%25), 200+50*(i/25)) if it is non-null. If it
-            //           _is_ null, write the word "null" at (20+30*(i%25) - w/2, 200+50*(i / 25))
+            //           _is_ null, write the word "null" at (20+30*(i%25) - w/2 + 10, 205+50*(i / 25))
             // hint: borrow heavily from the corresponding section above,
             //       initially line 40.
         }
