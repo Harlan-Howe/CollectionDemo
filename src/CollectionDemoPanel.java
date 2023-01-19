@@ -48,8 +48,8 @@ public class CollectionDemoPanel extends JPanel
         g.setFont(titleFont);
         g.drawString("ArrayList",20,150);
 
-        //TODO #1: fix the next line so that it actually asks the array how many spaces it has. (Yes, this should be
-        // 25, but actually ask for it from the arrayListOfHexes.) Then remove the warning comment at the end of the line.
+        //TODO #1: fix the next line so that it actually asks the arraylist how many spaces it has.
+        // Then remove the warning comment at the end of the line.
         int numItemsInArrayList = 0; // currently, this is wrong.
 
         // ----------- draw the numbers
