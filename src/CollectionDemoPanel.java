@@ -16,6 +16,9 @@ public class CollectionDemoPanel extends JPanel
         titleFont = new Font("Serif",Font.BOLD, 18);
         arrayOfHexes = new HexItem[25];
         arrayListOfHexes = new ArrayList<HexItem>();
+        // temp code: start the array list off with two hexes, so you can see them when you write paintComponent().
+        arrayListOfHexes.add(new HexItem());
+        arrayListOfHexes.add(new HexItem());
     }
 
     public void paintComponent(Graphics g)
