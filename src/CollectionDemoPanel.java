@@ -19,6 +19,7 @@ public class CollectionDemoPanel extends JPanel
         // temp code: start the array list off with two hexes, so you can see them when you write paintComponent().
         arrayListOfHexes.add(new HexItem());
         arrayListOfHexes.add(new HexItem());
+        arrayListOfHexes.add(null);
     }
 
     public void paintComponent(Graphics g)
