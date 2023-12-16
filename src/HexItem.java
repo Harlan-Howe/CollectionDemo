@@ -149,4 +149,23 @@ public class HexItem
         return myLetter.equals(hexItem.myLetter) && myColor.equals(hexItem.myColor);
     }
 
+    public String getMyLetter()
+    {
+        return myLetter;
+    }
+
+    public void setMyLetter(String myLetter)
+    {
+        this.myLetter = myLetter;
+    }
+
+    public Color getMyColor()
+    {
+        return myColor;
+    }
+
+    public void setMyColor(Color myColor)
+    {
+        this.myColor = myColor;
+    }
 }
