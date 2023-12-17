@@ -71,55 +71,6 @@ public class CollectionDemoFrame extends JFrame implements ActionListener
     }
 
     /**
-     * builds the top right GUI and adds it to the box displayed in the NORTH of the screen.
-     * @param controlsPanel - the panel to which to add this.
-     */
-    private void makeIOBox(Box controlsPanel)
-    {
-        Box ioBox = Box.createHorizontalBox();
-        ioBox.setBorder(new TitledBorder("input/output"));
-        controlsPanel.add(ioBox);
-
-        Box spinnerBox = Box.createVerticalBox();
-        spinnerBox.add(Box.createVerticalGlue());
-
-        intSpinner = new JSpinner(new SpinnerNumberModel(0,-1,100,1));
-//        intSpinner.setBorder(new TitledBorder("Int"));
-        spinnerBox.add(intSpinner);
-        spinnerBox.add(Box.createVerticalGlue());
-        ioBox.add(spinnerBox);
-
-        ioBox.add(Box.createHorizontalStrut(60));
-
-        Box hexBox = Box.createHorizontalBox();
-//        hexBox.setBorder(new TitledBorder("Hex"));
-        ioBox.add(hexBox);
-
-        Box hexPanelBox = Box.createVerticalBox();
-        hexPanelBox.add(Box.createVerticalGlue());
-        myHexPanel = new HexItemPanel();
-        myHexPanel.setMyItem(new HexItem());
-        hexPanelBox.add(myHexPanel);
-        hexPanelBox.add(Box.createVerticalGlue());
-        hexBox.add(hexPanelBox);
-
-        Box hexButtonsPanel = Box.createVerticalBox();
-        newHexButton = new JButton ("\uD83C\uDD95");
-        newHexButton.addActionListener(this); // if somebody presses the button, call this.actionPeformed().
-        hexButtonsPanel.add(newHexButton);
-
-        nullHexButton = new JButton ("∅");
-        nullHexButton.addActionListener(this); // if somebody presses the button, call this.actionPeformed().
-        hexButtonsPanel.add(nullHexButton);
-
-        editHexButton = new JButton("✏");
-        editHexButton.addActionListener(this);
-//        hexButtonsPanel.add(editHexButton);
-
-        hexBox.add(hexButtonsPanel);
-    }
-
-    /**
      * builds the top left GUI and adds it to the box displayed in the NORTH of the screen.
      * @param controlsPanel - the panel to which to add this.
      */
@@ -150,6 +101,52 @@ public class CollectionDemoFrame extends JFrame implements ActionListener
         arrayListCommandPanel.add(executeALButton);
     }
 
+    /**
+     * builds the top right GUI and adds it to the box displayed in the NORTH of the screen.
+     * @param controlsPanel - the panel to which to add this.
+     */
+    private void makeIOBox(Box controlsPanel)
+    {
+        Box ioBox = Box.createHorizontalBox();
+        ioBox.setBorder(new TitledBorder("input/output"));
+        controlsPanel.add(ioBox);
+
+        Box spinnerBox = Box.createVerticalBox();
+        spinnerBox.add(Box.createVerticalGlue());
+
+        intSpinner = new JSpinner(new SpinnerNumberModel(0,-1,100,1));
+        spinnerBox.add(intSpinner);
+        spinnerBox.add(Box.createVerticalGlue());
+        ioBox.add(spinnerBox);
+
+        ioBox.add(Box.createHorizontalStrut(60));
+
+        Box hexBox = Box.createHorizontalBox();
+        ioBox.add(hexBox);
+
+        Box hexPanelBox = Box.createVerticalBox();
+        hexPanelBox.add(Box.createVerticalGlue());
+        myHexPanel = new HexItemPanel();
+        myHexPanel.setMyItem(new HexItem());
+        hexPanelBox.add(myHexPanel);
+        hexPanelBox.add(Box.createVerticalGlue());
+        hexBox.add(hexPanelBox);
+
+        Box hexButtonsPanel = Box.createVerticalBox();
+        newHexButton = new JButton ("\uD83C\uDD95");
+        newHexButton.addActionListener(this); // if somebody presses the button, call this.actionPeformed().
+        hexButtonsPanel.add(newHexButton);
+
+        nullHexButton = new JButton ("∅");
+        nullHexButton.addActionListener(this); // if somebody presses the button, call this.actionPeformed().
+        hexButtonsPanel.add(nullHexButton);
+
+        editHexButton = new JButton("✏");
+        editHexButton.addActionListener(this);
+//        hexButtonsPanel.add(editHexButton);
+
+        hexBox.add(hexButtonsPanel);
+    }
 
     /**
      * Invoked when an action occurs.
